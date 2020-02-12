@@ -7,9 +7,19 @@
 # -*- 功能说明 -*-
 # 测试用
 # -*- 功能说明 -*-
+
 import tool
 import String_Tool
-tool.SetPrintDisable(True)
-
 import Table_Tool
-Table_Tool.SortDictionaryByValue()
+import Table_Tool
+import Math_Tool
+
+def InitFuc():
+    tool.SetPrintDisable(True)
+
+
+if __name__ == "__main__":
+    self: InitFuc()
+    value = Math_Tool.MathPlural()
+    if not value == None:
+        print(value)

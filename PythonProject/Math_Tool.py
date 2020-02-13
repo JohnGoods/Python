@@ -84,4 +84,19 @@ def MathPlural():
     print(cmath.cos(a))
     print(cmath.exp(a))
     value = cmath.sqrt(-1) # 果你想生成一个复数返回结果，你必须显示的使用 cmath 模块
-    return  value
+    return value
+
+
+# 分数运算
+# 你进入时间机器，突然发现你正在做小学家庭作业，并涉及到分数计算问题。
+# 或者你可能需要写代码去计算在你的木工工厂中的测量值
+from fractions import Fraction
+def MathPHR():
+    a = Fraction(5, 4) #20/16
+    b = Fraction(7, 16) #7/16
+    print(a + b)
+    c = a * b
+    print(c.numerator)
+    print(c.denominator)
+    print(float(c))
+    print(c.limit_denominator(8)) #限制值的份母

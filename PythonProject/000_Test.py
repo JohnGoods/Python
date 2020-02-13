@@ -20,6 +20,6 @@ def InitFuc():
 
 if __name__ == "__main__":
     self: InitFuc()
-    value = Math_Tool.MathPlural()
+    value = Math_Tool.MathPHR()
     if not value == None:
         print(value)

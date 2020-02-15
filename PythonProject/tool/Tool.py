@@ -9,8 +9,8 @@
 # 别的py引入 import tool
 # -*- 功能说明 -*-
 
-import String_Tool
-import Table_Tool
+from tool import String_Tool
+from tool import Table_Tool
 
 #多次打印
 # tool.PrintMore("test",2)

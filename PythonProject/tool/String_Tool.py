@@ -8,7 +8,7 @@
 # 字符串工具
 # -*- 功能说明 -*-
 import tool
-import Table_Tool
+from tool import Table_Tool
 
 #第一个字母大写
 # tool.StrFirstBig('hello World') # Hello World

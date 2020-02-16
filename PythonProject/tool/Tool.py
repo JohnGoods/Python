@@ -66,12 +66,20 @@ def ListShowIndex(list):
 
 #执行时间
 import time
-def NeedTime(func):
+def NeedTime(func = None):
     start_time = time.time()
-    func()
+    #print("startTime----->",start_time)
+    value = None
+    if not func is None:
+        value = func()
     end_time = time.time()
     total_time = end_time - start_time
-    print("Time: ", total_time)
+    #print("endTime----->", end_time)
+    if not func is None:
+        print(func.__name__,"totalTime----->", total_time)
+    if not value is None:
+        return value
+
 #def test():
 #     a = 1
 #     b = 2

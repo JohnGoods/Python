@@ -36,10 +36,11 @@ class DFAFilter(object):
         self.keyword_chains = {}  # 关键词链表
         self.delimit = '\x00'  # 限定
         path = ConfigPathSystem().keywordsPath #过滤表路径
+        # path = ConfigPathSystem().getPathByName("keywords")
         with open(path, encoding='utf-8') as f:
             for keyword in f:
                 self.add(str(keyword).strip())
-        print(self.keyword_chains)
+        #print(self.keyword_chains)
         self.initFlag = True
 
     # 添加过滤词
@@ -110,3 +111,7 @@ class DFAFilter(object):
                 ret.append(message[start])
             start += 1
         return ''.join(ret)
+
+# text = "习近平"
+# print(DFAFilter().checkSensitiveWords(text))
+# print(DFAFilter().filter(text))

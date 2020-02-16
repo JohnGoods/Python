@@ -156,3 +156,9 @@ def MathMatrix(_martrix = None):
     print(v)
     print("==============")
     print(m * v)
+
+import random
+def GetRandonNum(num = None):
+    if num is None:
+        num = 10
+    return random.randint(0,num)

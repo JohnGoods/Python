@@ -9,25 +9,26 @@
 # -*- 功能说明 -*-
 from logic.ConfigPathSys import ConfigPathSystem
 from tool.Filter import DFAFilter
+from tool import Tool,String_Tool,Table_Tool,Math_Tool,Time_Tool,Filter
 
-from tool import Tool
-from tool import String_Tool
-from tool import Table_Tool
-from tool import Math_Tool
-from tool import Time_Tool
-from tool import Filter
-
+Model = 2
 def InitFuc():
     Tool.SetPrintDisable(True)
-    # ConfigPathSys.InitConfigPath()
-    ConfigPathSystem() #直接初始化
-    DFAFilter() #直接初始化
+    ConfigPathSystem()  # 直接初始化
+    DFAFilter()  # 直接初始化
+
+def Start():
+    print("main.fuc")
+
+def Test():
+    value = Tool.NeedTime(Time_Tool.TimeZoneOperation)
+    if not value == None:
+        print(value)
 
 if __name__ == "__main__":
-    self:InitFuc()
-    text = "习近平"
-    print(DFAFilter().checkSensitiveWords(text))
-    print(DFAFilter().filter(text))
-    # value = Math_Tool.MathMatrix()
-    # if not value == None:
-    #     print(value)
+    Tool.NeedTime(InitFuc)
+    #self: InitFuc()
+    if Model == 1:
+        self: Start()
+    elif Model == 2:
+        self: Test()

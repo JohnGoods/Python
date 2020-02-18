@@ -58,8 +58,9 @@ class ConfigPathSystem(object):
                 try:
                     pytz.country_timezones[str(keywordStr[2])]
                 except BaseException as e:
-                    _str = str(e) + "==========is error Key=========="
-                    print('\033[1;31m'+_str+'\033[0m')
+                    pass
+                    # _str = str(e) + "==========is error Key=========="
+                    # print('\033[1;31m'+_str+'\033[0m')
                 else:
                     #获取国家的时区代码
                     value = pytz.country_timezones[str(keywordStr[2])]

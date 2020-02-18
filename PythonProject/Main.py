@@ -9,7 +9,7 @@
 # -*- 功能说明 -*-
 from logic.ConfigPathSys import ConfigPathSystem
 from tool.Filter import DFAFilter
-from tool import Tool,String_Tool,Table_Tool,Math_Tool,Time_Tool,Filter
+from tool import Tool,String_Tool,Table_Tool,Math_Tool,Time_Tool,Iter_Tool,Filter
 
 Model = 2
 def InitFuc():
@@ -21,7 +21,7 @@ def Start():
     print("main.fuc")
 
 def Test():
-    value = Tool.NeedTime(Time_Tool.TimeZoneOperation)
+    value = Tool.NeedTime(Iter_Tool.SmallIter())
     if not value == None:
         print(value)
 
@@ -29,6 +29,6 @@ if __name__ == "__main__":
     Tool.NeedTime(InitFuc)
     #self: InitFuc()
     if Model == 1:
-        self: Start()
+        self:Start()
     elif Model == 2:
-        self: Test()
+        self:Test()
